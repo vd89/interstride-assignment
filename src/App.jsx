@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Container, Grid, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import { StudentSection, TabElement, TabValueSection } from './Components'
 import axios from 'axios'
 
@@ -23,7 +23,6 @@ function App() {
 
   const getTabValue = (_id) => {
     setTabIndex(_id)
-    console.log('tabIndex', _id)
   }
 
   useEffect(() => {
