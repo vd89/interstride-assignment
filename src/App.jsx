@@ -1,12 +1,19 @@
-import { Typography } from '@mui/material'
+import { useState } from 'react'
+import { Container, Grid, Typography } from '@mui/material'
+import { StudentSection, TabElement } from './Components'
 
 function App() {
+  const [getTabIndex, setTabIndex] = useState('one')
+
+  const getTabValue = (_id) => {
+    setTabIndex(_id)
+    console.log('tabIndex', _id)
+  }
   return (
-    <>
-      <Typography variant='h4' component={'h2'}>
-        hello world
-      </Typography>
-    </>
+    <Container>
+      <TabElement getTabValue={getTabValue} />
+      <StudentSection />
+    </Container>
   )
 }
 
